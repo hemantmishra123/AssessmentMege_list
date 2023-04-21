@@ -45,6 +45,9 @@ def merge_lists(list_1, list_2) -> list:
                     temp_dict[key] = data[key]
             
             hash_map[data["id"]] = temp_dict
+        #if id does not exis then also add that. for shwoing the all students from the both list.   
+        else:
+            hash_map[data["id"]] = data
     
     output_data = []
     for key in hash_map.keys():
